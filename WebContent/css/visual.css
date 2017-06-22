@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+.pp {
+color: #8a6d3b;
+	background-color: #fcf8e3;
+}
+
+.dd {
+	color: #3c763d;
+	background-color: #dff0d8;
+}
+
+.cc {
+	color: #31708f;
+	background-color: #d9edf7;
+}
+
+.aa {
+	color: #a94442;
+	background-color: #f2dede;
+}

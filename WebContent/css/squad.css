@@ -1,0 +1,65 @@
+@CHARSET "ISO-8859-1";
+
+.PP {
+color: #8a6d3b;
+	background-color: #fcf8e3;
+}
+
+.DD {
+	color: #3c763d;
+	background-color: #dff0d8;
+}
+
+.CC {
+	color: #31708f;
+	background-color: #d9edf7;
+}
+
+.AA {
+	color: #a94442;
+	background-color: #f2dede;
+}
+
+.mypd {
+	/*border: 2px solid #8a6d3b;
+	 margin-bottom: -1px;
+	 border-top-left-radius: 4px;
+  border-top-right-radius: 4px;*/
+  max-width: 300px;  height: 50px;
+  	background-color: #fcf8e3;
+  	border: 1px solid #ddd;
+
+
+}
+
+.mydd {
+	/* border: 2px solid #3c763d;
+	 margin-bottom: -1px;
+	 border-top-left-radius: 4px;
+  border-top-right-radius: 4px; */
+  max-width: 300px; height: 225px; 
+background-color: #dff0d8;
+border: 1px solid #ddd;
+}
+
+.mycd {
+/*	border: 2px solid #31708f;
+	 margin-bottom: -1px;
+	 border-top-left-radius: 4px;
+  border-top-right-radius: 4px; */
+  max-width: 300px; height: 225px;
+	background-color: #d9edf7;
+	border: 1px solid #ddd;
+
+}
+
+.myad {
+/*	border: 2px solid #a94442;
+	 margin-bottom: -1px;
+	 border-top-left-radius: 4px;
+  border-top-right-radius: 4px; */
+  max-width: 300px; 
+  height: 180px;
+  	background-color: #f2dede;
+  border: 1px solid #ddd;
+}
