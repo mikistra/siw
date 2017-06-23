@@ -8,6 +8,8 @@
 <title>Fantastik</title>
 <link href="<%=request.getContextPath()%>/css/bootstrap.min.css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/sweetalert.css">
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/home.css">
+
 </head>
 <body>
 
@@ -40,9 +42,61 @@
       </div>
    </div>
 
+
+<%------------########################################------------------------------------- --%>
+
+ 
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
+    Launch
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"   aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+      
+      
+            <div class="modal-header">
+                <button type="button" class="close"  data-dismiss="modal">
+                		<span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                  Admin Login
+                </h4>
+            </div>
+            
+        
+            <div class="modal-body">
+                
+                <form id="modform" role="form" action="${pageContext.request.contextPath}/AccessServlet?action=adminlogin" method="POST">
+                  <div class="form-group">
+                    <label for="inputuser">User</label>
+                      <input type="text" class="form-control" id="inputuser" placeholder="User" name="usr"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputpass">Password</label>
+                      <input type="password" class="form-control" id="inputpass" placeholder="Password" name="psw"/>
+                  </div>
+
+                </form>
+                
+                
+            </div>
+           
+            <div class="modal-footer">
+                   <button type="submit" class="btn btn-primary"  form="modform">Accedi</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%------------########################################------------------------------------- --%>
+
 	<script src="<%=request.getContextPath()%>/js/jquery-3.1.1.js" type="text/javascript"></script>
 	<script src="<%=request.getContextPath()%>/js/sweetalert.min.js"></script>
 	<script src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
+	<script src="<%=request.getContextPath()%>/js/home.js"></script>
 
 </body>
 </html>

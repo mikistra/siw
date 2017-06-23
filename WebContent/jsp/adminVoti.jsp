@@ -10,6 +10,7 @@
 <link href="<%=request.getContextPath()%>/css/bootstrap.min.css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/sweetalert.css">
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/jquery-ui.min.css">
+
 </head>
 <body>
 

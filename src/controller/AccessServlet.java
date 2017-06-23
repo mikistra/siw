@@ -4,6 +4,7 @@ import java.io.Console;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -187,10 +188,25 @@ public class AccessServlet extends HttpServlet {
 			
 			
 		}//checkuser
+		else if(request.getParameter("action").equals("adminlogin"))
+		{
 	
-	
-	}
+			String usr =request.getParameter("usr");
+			String psw = request.getParameter("psw");
+			
+			if(usr.equals("admin") && psw.equals("admin"))
+			   nextPage="/jsp/adminVoti.jsp";
+			else
+				nextPage="/jsp/error.jsp";
+				
+			
+			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+			dispatcher.forward(request, response);
+			
+			return;
+			
+		}
 
-	
+	}
 	
 }
