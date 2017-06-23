@@ -75,9 +75,13 @@
 
 		</div>
 
-<br>
-<br>
+
 	</div>
+	
+	<br>
+	
+	<hr>
+	<br>
 
 	<script src="<%=request.getContextPath()%>/js/jquery-3.1.1.js" type="text/javascript"></script>
 	<script src="<%=request.getContextPath()%>/js/sweetalert.min.js"></script>

@@ -116,7 +116,6 @@
 		</div>
 	</div>
 
-
 	<script src="<%=request.getContextPath()%>/js/jquery-3.1.1.js" type="text/javascript"></script>
 	<script src="<%=request.getContextPath()%>/js/loginscripts.js" type="text/javascript"></script>
 	<script src="<%=request.getContextPath()%>/js/sweetalert.min.js"></script>
