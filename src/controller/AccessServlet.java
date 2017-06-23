@@ -1,10 +1,7 @@
 package controller;
 
-import java.io.Console;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.io.PrintWriter;
-import java.util.Enumeration;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -99,8 +96,11 @@ public class AccessServlet extends HttpServlet {
 	    	}
 		else
 		 {
-			nextPage="/jsp/error.jsp";
+			nextPage="/jsp/login.jsp";
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+			
+			request.setAttribute("wronglog", "wrong");
+			
 			dispatcher.forward(request, response);
 			return;
 		 }
@@ -117,7 +117,10 @@ public class AccessServlet extends HttpServlet {
 				
 			if(!accountutility.validaDati(utente))
 				{
-				nextPage="/jsp/error.jsp";  //erroreee
+				nextPage="/jsp/login.jsp"; 
+				
+				request.setAttribute("wrongreg", "controlla i dati inseriti");
+				
 				RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
 				dispatcher.forward(request, response);
 				return;
@@ -130,7 +133,10 @@ public class AccessServlet extends HttpServlet {
 	
 			if(!accountutility.validaCredenziali(credenziali, request.getParameter("pswrepeat"))) 
 				{
-				nextPage="/jsp/error.jsp";  //erroreee
+				nextPage="/jsp/login.jsp"; 
+				
+				request.setAttribute("wrongreg", "errore campi password");
+				
 				RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
 				dispatcher.forward(request, response);
 				return;
@@ -140,7 +146,10 @@ public class AccessServlet extends HttpServlet {
 			
 			if(!done)
 				{
-				nextPage="/jsp/error.jsp";  //erroreee
+				nextPage="/jsp/login.jsp";  
+				
+				request.setAttribute("wrongreg", "utente gia' registrato");
+
 				RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
 				dispatcher.forward(request, response);
 				return;
@@ -173,6 +182,8 @@ public class AccessServlet extends HttpServlet {
 				JsonObject jsonobject= new Gson().fromJson(pacchetto, JsonObject.class);
 				String usern=jsonobject.get("useridea").getAsString(); 
 				
+				response.setContentType("text/html");
+				
 				if(accountutility.userDisponibile(usern))
 				{
 					response.getWriter().print(1);
@@ -197,8 +208,10 @@ public class AccessServlet extends HttpServlet {
 			if(usr.equals("admin") && psw.equals("admin"))
 			   nextPage="/jsp/adminVoti.jsp";
 			else
-				nextPage="/jsp/error.jsp";
-				
+			{
+				nextPage="/jsp/home.jsp";
+			request.setAttribute("wronglogin", "wrong");
+			}
 			
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
 			dispatcher.forward(request, response);

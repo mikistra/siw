@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -35,10 +35,18 @@
 	<hr>
 
 <div class="row">
-<div class="col-md-11"></div>
+<div class="col-md-3">
+</div>
+<div class="col-md-4">
+<c:if test="${not empty wronglogin}">
+<div class="alert alert-danger" role="alert"><strong>Login admin errato</strong></div>
+</c:if>
+</div>
+<div class="col-md-4">
+</div>
       <div class="col-md-1">
       
-          <a href="<%=request.getContextPath()%>/AccessServlet?action=adminvoti"><span class="glyphicon glyphicon-cog"></span></a>
+          <span data-toggle="modal" data-target="#myModalNorm" class="glyphicon glyphicon-cog"></span>
       </div>
    </div>
 
@@ -46,11 +54,7 @@
 <%------------########################################------------------------------------- --%>
 
  
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
-    Launch
-</button>
-
-<!-- Modal -->
+<!-- ---------------- Modal  ---------------- --- -->
 <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"   aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
