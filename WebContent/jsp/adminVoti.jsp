@@ -21,18 +21,33 @@
 
 <br>
 <br>
------------------------------
 
-<form action="UploadVotiS" method="post" enctype="multipart/form-data">
+<h4>Seleziona giornata</h4>
+	<select id="giorn" class="form-control">
+			<c:forEach var="i" begin="1" end="38">
+				<option value="${i}">${i}</option>
+			</c:forEach>
+		</select>
+
+<%-- ---------------form----------------------- --%>
+<br>
+<br>
+<h4>Carica file voti</h4>
+
+<form id="carica"  method="POST" enctype="multipart/form-data">
 
     <label class="btn btn-default btn-file ">
         Browse <input type="file"  name="fileup"  style="display: none;">
     </label>
-			<input class="btn btn-default" type="submit" />
+			<input id="vai" class="btn btn-default" type="submit"  value="UpLoaD"/>
     
 </form>
+<%-- ---------------form----------------------- --%>
+<br>
 
-
+<div id="risultato">
+ <a  href="${pageContext.request.contextPath}" class="btn btn-lg btn-success"> Home</a>
+</div>
 
  </div>
 

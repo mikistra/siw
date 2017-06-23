@@ -16,9 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import com.sun.media.sound.InvalidFormatException;
 
 import model.Voto;
+import service.ScoreUtility;
 import service.VotiAnalyzer;
 
 /**
@@ -52,24 +52,28 @@ public class UploadVotiS extends HttpServlet {
 			VotiAnalyzer votianalyzer= new VotiAnalyzer();
 		
 	      Part filePart = request.getPart("fileup");
+	      
+	      int giornata= Integer.parseInt(request.getParameter("giorn"));
 		
 		  InputStream inputstream= filePart.getInputStream();
 		  
 		  List<Voto> voti=null;
 		  
+		  
 		try {
-			voti = votianalyzer.leggi(1, (FileInputStream) inputstream);
+			voti = votianalyzer.leggi(giornata, (FileInputStream) inputstream);
 		} catch (org.apache.poi.openxml4j.exceptions.InvalidFormatException e) {
 			e.printStackTrace();
-		}		  
-	      
-		  for (Voto voto : voti) {
-			  
-			  System.out.println(voto.toString());
-							  
-		}
-	         
-			
+		}		
+		
+		ScoreUtility scoreutility = new ScoreUtility();
+		scoreutility.inserisciVoti(voti);
+		
+		inputstream.close();
+		
+	    
+	    
+		  return;
 	}
 
 }

@@ -119,4 +119,10 @@ public class ScoreUtility {
 		
 	}
 	
+	
+	public void inserisciVoti(List<Voto> voti)
+	{
+		votodao.addVoti(voti);		
+	}
+	
 }

@@ -41,7 +41,8 @@
 			</form>
 
 			<c:if test="${not empty wronglog}">
-				<div class="alert alert-danger" role="alert">
+				<div class="alert alert-danger alert-dismissible fade in" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<strong>Login fallito</strong>
 				</div>
 			</c:if>
@@ -105,7 +106,8 @@
 
 
 			<c:if test="${not empty wrongreg}">
-				<div class="alert alert-danger" role="alert">
+				<div class="alert alert-danger alert-dismissible fade in" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<strong>Registrazione fallita</strong>
 					<p>${wrongreg}</p>
 				</div>

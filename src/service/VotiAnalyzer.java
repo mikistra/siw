@@ -33,8 +33,7 @@ public class VotiAnalyzer {
 		boolean allen;
 		
 		try {
-	         // String excelFilePath = "C:/Users/Miki/Desktop/vots/35.xlsx";
-	       //   FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
+	    
 	          
 			 FileInputStream inputStream = inputS;
 	          

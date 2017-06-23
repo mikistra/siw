@@ -71,7 +71,7 @@ public class SquadraServlet extends HttpServlet {
 			
 			request.setAttribute("nsquadra", nsquadra);
 			request.setAttribute("nlega", lega.getNomelega());
-			//controllare user app
+
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
 			dispatcher.forward(request, response);
 			return;
