@@ -33,6 +33,12 @@
   padding-left:20px;
 }
 
+.nav-wrapper, #nav { 
+   height: 55px; 
+   
+   
+
+
 </style>
 
 
@@ -48,6 +54,7 @@
 	</div>
 <%------------------------------------------------------------------------- --%>
 <!-- Begin Navbar -->
+<div class="nav-wrapper">
 <div id="nav">
   <div class="navbar navbar-default navbar-static-top">
     <div class="container">
@@ -68,7 +75,7 @@
 						<li></li>
 						<li>
 						</li>
-						<li><span class="btn btn-primary navbar-btn"> <a href="${pageContext.request.contextPath}">HOME</a></span></li>
+						<li><span class="btn btn-primary navbar-btn"><a href="${pageContext.request.contextPath}">HOME</a></span></li>
 				    	<li></li>
 						<li>
 							<button class="btn btn-primary navbar-btn" type="submit" form="navform">
@@ -80,7 +87,7 @@
     </div>
   </div>
 </div>
-
+</div>
 <%------------------------------------------------------------------------------------------ --%>
 
 <form  id="navform" action="${pageContext.request.contextPath}/AccessServlet?action=logout" method="POST">
@@ -93,11 +100,11 @@
 	<script  type="text/javascript">
 	
 	$('#nav').affix({
-	  //    offset: {
-	   //     top: $('#logo').height()
-	   target : $("#logo")  
+	      offset: {
+	        top: $('#logo').height()
+	  // target : $("#logo")  
 	   
-	    //  }
+	     }
 	
 	});	
 			

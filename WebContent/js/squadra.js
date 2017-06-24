@@ -87,11 +87,13 @@ $.ajax({
 			
 			$.each(data, function(i, val) {
 				
-				var div=$('<div></div>');
-				div.addClass("col-xs-4");
+				var div=$('<div class="teamscore"></div>');
+				div.addClass("col-xs-2");
 				div.append("<h4>"+val.nomesquadra+"</h4>");
 				div.append("<h4>Punteggio:"+val.punteggio+"</h4>");
 				$("#allsq").append(div);
+				
+				
 				});
 			
 		}

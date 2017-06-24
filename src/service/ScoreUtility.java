@@ -9,19 +9,16 @@ import model.Risultato;
 import model.Voto;
 import persistence.DAOFactory;
 import persistenceDAO.FormazioneDAO;
-import persistenceDAO.GiocatoreDAO;
 import persistenceDAO.LegaDAO;
 import persistenceDAO.RankDAO;
 import persistenceDAO.RisultatoDAO;
 import persistenceDAO.SquadraDAO;
 import persistenceDAO.VotoDAO;
-import sun.net.idn.Punycode;
 
 public class ScoreUtility {
 	
 	private DAOFactory factory;
 	private LegaDAO legadao;
-	private GiocatoreDAO giocatoredao;
 	private SquadraDAO squadradao;
 	private FormazioneDAO formazionedao;
 	private RisultatoDAO risultatodao;
@@ -35,7 +32,6 @@ public class ScoreUtility {
 		this.factory = DAOFactory.getDAOFactory(DAOFactory.SQLSERVER);
 		this.formazionedao = this.factory.getFormazioneDAO();
 		this.legadao=this.factory.getLegaDAO();
-		this.giocatoredao=this.factory.getGiocatoreDAO();
 		this.squadradao=this.factory.getSquadraDAO();
 		this.risultatodao=this.factory.getRisultatoDAO();
 		this.rankdao=this.factory.getRankDAO();

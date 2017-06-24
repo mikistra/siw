@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Rank;
-import model.Squadra;
 import persistenceDAO.RankDAO;
 
 public class RankDaoJDBC  implements RankDAO{

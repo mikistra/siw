@@ -63,3 +63,11 @@ border: 1px solid #ddd;
   	background-color: #f2dede;
   border: 1px solid #ddd;
 }
+
+.teamscore{
+	border: 1px solid #337AB7;
+	border-radius: 20px;
+	background-color: #E1ECF7;
+	border-collapse: collapse;
+}
+

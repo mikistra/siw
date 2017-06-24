@@ -21,9 +21,12 @@
 	<br>
 
 	<div class="container">
-		<h1> Pagina della squadra <span id="nsquadra">${nsquadra}</span></h1>
-		<h2> partecipante alla lega <span id="nlega">${nlega}</span> </h2>
-		
+		<div class="alert alert-info">
+		<h1> Centro operativo <strong><span id="nsquadra">${nsquadra}</strong></span></h1>
+		</div>
+		<div class="well well-sm">
+		<h3> squadra iscritta alla lega <strong><span id="nlega">${nlega}</span></strong> </h3>
+		</div>
 	</div>
 
 	<div id="exTab2" class="container">
@@ -86,19 +89,20 @@
 
 					<div class="container">
 						<div class="row">
-						
+						<div class="col-xs-1"></div>
 						<div class="col-xs-4">
 						<h4>Giocatori disponibili</h4>
 						
 						<div id="myteam" class="list-group" style="max-width: 300px; height: 750px;">
 						
 						<div id="myP" class="dropp" style="height: 90px; border:2px "></div>
+						<br>
 						<div id="myD" class="dropd" style="height: 220px; border:2px "></div>
 						<div id="myC" class="dropc" style="height: 220px; border:2px "></div>
 						<div id="myA" class="dropa" style="height: 190px; border:2px "></div>
 						</div>						
 						</div>	
-							
+							<div class="col-xs-1"></div>
 						<div class="col-xs-4">
 						<h4>Formazione scelta</h4>
 						
@@ -106,10 +110,13 @@
 					
 						<div class="mypd dropp" >
 						</div>
+						<br>
 						<div class="mydd dropd" >
 						</div>
+						<br>
 						<div class="mycd dropc" >
 						</div>
+						<br>
 						<div class="myad dropa" >
 						</div>
 						
@@ -157,7 +164,7 @@
 		
 	</div>
 
-
+<br>
 
 <hr>
 

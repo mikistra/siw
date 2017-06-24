@@ -7,9 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Formazione;
 import model.Risultato;
-import model.Squadra;
 import persistenceDAO.RisultatoDAO;
 
 public class RisultatoDaoJDBC implements RisultatoDAO {

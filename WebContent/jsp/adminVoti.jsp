@@ -16,8 +16,9 @@
 
 <div class="container">  
 
+<div class="list-group-item list-group-item-success">
 <h3>Inserimento voti</h3>
-
+</div>
 
 <br>
 <br>
@@ -37,9 +38,9 @@
 <form id="carica"  method="POST" enctype="multipart/form-data">
 
     <label class="btn btn-default btn-file ">
-        Browse <input type="file"  name="fileup"  style="display: none;">
+        Scegli file <input type="file"  name="fileup"  style="display: none;">
     </label>
-			<input id="vai" class="btn btn-default" type="submit"  value="UpLoaD"/>
+			<input id="vai" class="btn btn-default" type="submit"  value="Upload"/>
     
 </form>
 <%-- ---------------form----------------------- --%>

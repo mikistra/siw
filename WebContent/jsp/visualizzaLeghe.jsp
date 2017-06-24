@@ -42,10 +42,9 @@
 
 	<div id="classif" style="display: none">
 		<div class="container">
-			Classifica lega <strong> <span id="nlega"> </span>
-			</strong>
+			<h3>Classifica lega <strong> <span id="nlega"> </span></strong> </h3>
 
-			<div class="panel-heading"></div>
+			<div class="panel panel-default">
 			<table class="table">
 				<thead>
 					<tr>
@@ -58,6 +57,7 @@
 			
 				</tbody>
 			</table>
+			</div>
 			<br> 
 			<%-- progress bar --%>
 			<div class="container">
@@ -71,7 +71,7 @@
 			<%-- --%>
 		<br>
 		<br>	
-			<a id="goto" href="<%=request.getContextPath()%>/SquadraServlet?action=pagsquadra&nsquadra="> Vai alla pagina squadra </a>
+			<a class="btn btn-primary" id="goto" href="<%=request.getContextPath()%>/SquadraServlet?action=pagsquadra&nsquadra="> Vai alla pagina squadra </a>
 
 		</div>
 

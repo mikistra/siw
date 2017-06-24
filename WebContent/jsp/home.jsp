@@ -17,11 +17,11 @@
 
 	<div class="jumbotron">
 		<div class="container">
-			<h1>ciao,</h1>
-			<p>Benvenuto in fantastik, il sito per la gestione del fantacalcio semplice e intuitivo e bla bla</p>
+			<h1>Benvenuto in Fantastik</h1>
+			<p>Fantastik è una piattaforma semplice e intuitiva per la gestione dei campionati di fantacalcio. Grazie ad un'interfaccia chiara e dinamica, creare e gestire i campionati tra amici non è mai stato così semplice.</p>
 			<p>
 				<a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/AccessServlet?action=loginpage"
-					role="button">Accedi</a>
+					role="button"">Entra nel mondo di Fantastik</a>
 			</p>
 		</div>
 	</div>
